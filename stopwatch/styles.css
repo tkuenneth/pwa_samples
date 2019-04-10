@@ -1,0 +1,12 @@
+body {
+    background-color: lightgrey;
+}
+
+.timer {
+    color: darkblue;
+    font-size: 48pt;
+}
+
+button {
+    font-size: 22pt;
+}
