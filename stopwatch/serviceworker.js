@@ -1,7 +1,13 @@
 const CACHE_NAME = 'stopwatch-cache-v1';
 const urlsToCache = [
     '/',
+    '/icon_512x512.png',
+    '/icon_192x192.png',
+    '/icon_180x180.png',
     '/styles.css',
+    '/manifest.json',
+    '/serviceworker.js',
+    '/index.html',
     '/index.js',
 ];
 
