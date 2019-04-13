@@ -14,7 +14,7 @@ function handleResetClicked() {
 }
 
 function updateButtons() {
-    let text = (running != false) ? "Stop" : "Start";
+    const text = (running != false) ? "Stop" : "Start";
     let buttonStartStop = document.getElementById("buttonStartStop");
     buttonStartStop.innerHTML = text;
     buttonStartStop.text = text;
@@ -26,12 +26,12 @@ async function updateTimer() {
     if (running) {
         millis = await increaseTimer();
     }
-    var timer = new Date(millis);
-    var h = prefixWithZeros(timer.getUTCHours(), 2);
-    var m = prefixWithZeros(timer.getUTCMinutes(), 2);
-    var s = prefixWithZeros(timer.getUTCSeconds(), 2);
-    var ms = prefixWithZeros(timer.getUTCMilliseconds(), 4);
-    var text = `${h}:${m}:${s}:${ms}`;
+    const timer = new Date(millis);
+    const h = prefixWithZeros(timer.getUTCHours(), 2);
+    const m = prefixWithZeros(timer.getUTCMinutes(), 2);
+    const s = prefixWithZeros(timer.getUTCSeconds(), 2);
+    const ms = prefixWithZeros(timer.getUTCMilliseconds(), 4);
+    const text = `${h}:${m}:${s}:${ms}`;
     document.getElementById("timer").innerHTML = text;
 }
 
@@ -41,7 +41,7 @@ function prefixWithZeros(number, digits) {
 
 
 function increaseTimer() {
-    let duration = 43 + Math.floor(Math.random() * 100);
+    const duration = 43 + Math.floor(Math.random() * 100);
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             updateTimer();
