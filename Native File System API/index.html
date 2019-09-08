@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Native File System Demos</title>
+</head>
+
+<body>
+    <p>
+        <div style="display: inline-flex">
+            <button id="buttonNew" onclick="handleShowContentsClicked()">
+                Show directory
+            </button>
+            &nbsp;
+            <button id="buttonNew" onclick="handleNewClicked()">
+                New file
+            </button>
+            &nbsp;
+            <button id="buttonSelect" onclick="handleSelectClicked()">
+                Pick file
+            </button>
+            &nbsp;
+            <div id="filename"></div>
+            &nbsp;
+            <button id="buttonSave" onclick="handleSaveClicked()">
+                Save file
+            </button>
+        </div>
+    </p>
+    <textarea id="fileContent" rows="10" cols="50"></textarea>
+    <script src='mini_editor.js'></script>
+</body>
+
+</html>
