@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CounterDemoPWA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon_180x180.png">
+</head>
+
+<body>
+    <div style="text-align:center;">
+        <div style="display: flex; justify-content: center; height: 200px;">
+            <div style="align-self: center;" class="counter" id="counter"></div>
+        </div>
+        <p>
+            <button id="buttonClicked" onclick="handleButtonClicked()">Klick</button>
+        </p>
+    </div>
+    <script src='index.js'></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/serviceworker.js')
+                .then(() => {
+                    console.log('Service worker registered');
+                })
+                .catch(err => {
+                    console.log('Service worker registration failed: ' + err);
+                });
+        }
+    </script>
+
+</body>
+
+</html>
